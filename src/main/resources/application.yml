@@ -1,0 +1,9 @@
+logging:
+  level:
+    cn.withyyy.handtohand.dao: trace
+  pattern:
+    console: '%p%m%n'
+
+spring:
+  mvc:
+    static-path-pattern: /static/**

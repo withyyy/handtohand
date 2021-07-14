@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <div th:replace="common/common :: #commonscript"></div>
+    <script>
+        $(function () {
+            $("#update").click(function () {
+                location.href="/updateUserInfo"
+            })
+        })
+    </script>
+</head>
+<body>
+<div th:replace="common/common::userInfo"/>
+<button id="update" value="修改资料"></button>
+</body>
+</html>

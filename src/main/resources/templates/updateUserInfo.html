@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/updateUserInfo" method="post">
+  <table>
+    <tr>
+      <td>用户名</td>
+      <td th:text="${session.loginUser.getUsername()}"></td>
+    </tr>
+    <tr>
+      <td>邮箱</td>
+      <td th:text="${session.loginUser.getEmail()}"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>电话</td>
+      <td th:text="${session.loginUser.getPhone()}"></td>
+    </tr>
+    <tr>
+      <td>地址</td>
+      <td th:text="${session.loginUser.getAddr()}">空</td>
+    </tr>
+  </table>
+
+  <div th:replace="common/common::#commonscript"></div>
+</form>
+</body>
+</html>

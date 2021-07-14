@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commonheader">
+  <!--common-->
+  <link href="css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+  <link href="css/style-responsive.css" th:href="@{/css/style-responsive.css}" rel="stylesheet">
+
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js" th:src="@{/js/html5shiv.js}"></script>
+  <script src="js/respond.min.js" th:src="@{/js/respond.min.js}"></script>
+  <![endif]-->
+</head>
+<body>
+
+
+<div th:fragment="userInfo">
+  <table>
+    <tr>
+      <td>用户名</td>
+      <td th:text="${session.loginUser.getUsername()}"></td>
+    </tr>
+    <tr>
+      <td>邮箱</td>
+      <td th:text="${session.loginUser.getEmail()}"></td>
+    </tr>
+    <tr>
+      <td>电话</td>
+      <td th:text="${session.loginUser.getPhone()}"></td>
+    </tr>
+    <tr>
+      <td>地址</td>
+      <td th:text="${session.loginUser.getAddr()}">空</td>
+    </tr>
+  </table>
+</div>
+
+<div id="commonscript">
+  <script th:src="@{/static/js/jquery-3.6.0.min.js}"></script>
+</div>
+</body>
+</html>
