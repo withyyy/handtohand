@@ -89,7 +89,7 @@ public class IndexController {
     }
 
     /**
-     * 注册方法，
+     * 注册方法。
      * @param user
      * @param model
      * @param session
