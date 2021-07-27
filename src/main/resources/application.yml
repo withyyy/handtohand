@@ -6,5 +6,5 @@ logging:
 
 spring:
   mvc:
-    static-path-pattern: /static/**
+    static-path-pattern: /**
 
